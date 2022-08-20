@@ -13,7 +13,7 @@ setup(
     url="https://github.com/34j/psd_generator_builder",
     packages=find_packages('psd_generator_builder'),
     install_requires=['git+https://github.com/34j/psd2pngs.git'],
-    license='MIT',
+    license='MIT License',
     entry_points={
         "console_scripts": [
             "psd_generator_builder = psd_generator_builder.__main__:psd_generator_builder",

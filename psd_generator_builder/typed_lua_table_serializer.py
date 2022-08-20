@@ -42,7 +42,7 @@ def deserialize(
     for key, value in obj.items():
         if key == "type":
             continue
-        if key == '':
+        if key is None:
             pass
         elif re.fullmatch(r"[a-zA-Z_][a-zA-Z0-9_]*", key):
             result += key + " = "

@@ -28,7 +28,6 @@ def deserialize(
     ValueError
         Key 'type' is missing. Raises only when raise_when_key_missing is True.
     """
-
     if not isinstance(obj, dict):
         return f'"{obj}"'
 
@@ -43,7 +42,9 @@ def deserialize(
     for key, value in obj.items():
         if key == "type":
             continue
-        if re.fullmatch(r"[a-zA-Z_][a-zA-Z0-9_]*", key):
+        if key == '':
+            pass
+        elif re.fullmatch(r"[a-zA-Z_][a-zA-Z0-9_]*", key):
             result += key + " = "
         else:
             result += f'["{key}"] = '
